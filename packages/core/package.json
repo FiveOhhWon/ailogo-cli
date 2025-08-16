@@ -20,7 +20,8 @@
     "gradient-string": "^2.0.2"
   },
   "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/figlet": "^1.5.8",
     "typescript": "^5.5.0"
   }
 }
-

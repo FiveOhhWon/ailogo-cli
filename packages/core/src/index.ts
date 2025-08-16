@@ -2,7 +2,7 @@ import figlet from "figlet";
 import chalk from "chalk";
 import gradient from "gradient-string";
 import boxen, { Options as BoxenOptions } from "boxen";
-export * from "./config";
+export * from "./config.js";
 
 export type RenderOptions = {
   font?: string;
@@ -20,20 +20,20 @@ export function render(text: string, options: RenderOptions = {}): string {
     align = "left",
   } = options;
 
-  const ascii = figlet.textSync(text, { font, width: 120, whitespaceBreak: true });
+  const ascii = figlet.textSync(text, { font, width: 120, whitespaceBreak: true } as any);
 
   let colored = ascii;
   if (Array.isArray(colors) && colors.length > 1) {
-    const grad = gradient(colors as any);
+    const grad = (gradient as any)(colors as any);
     colored = ascii
       .split("\n")
-      .map(line => grad.multiline(line))
+      .map((line: string) => grad.multiline(line))
       .join("\n");
   } else if (typeof colors === "string") {
     const fn = (chalk as any)[colors] || chalk.hex(colors);
     colored = ascii
       .split("\n")
-      .map(line => fn(line))
+      .map((line: string) => fn(line))
       .join("\n");
   }
 
@@ -41,7 +41,7 @@ export function render(text: string, options: RenderOptions = {}): string {
   if (align !== "left") {
     aligned = colored
       .split("\n")
-      .map(line => alignLine(line, align))
+      .map((line: string) => alignLine(line, align))
       .join("\n");
   }
 
