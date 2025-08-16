@@ -2,6 +2,7 @@ import figlet from "figlet";
 import chalk from "chalk";
 import gradient from "gradient-string";
 import boxen, { Options as BoxenOptions } from "boxen";
+export * from "./config";
 
 export type RenderOptions = {
   font?: string;
@@ -102,7 +103,7 @@ export function renderTheme(name: string, text?: string, overrides: Partial<Rend
 
 // Minimal built-in theme
 registerTheme({
-  name: "gem",
+  name: "gemini",
   font: "Standard",
   colors: ["#30cfd0", "#330867"],
   box: { borderStyle: "double" },
@@ -110,3 +111,11 @@ registerTheme({
   sampleText: "AILogo",
 });
 
+registerTheme({
+  name: "claude",
+  font: "Standard",
+  colors: ["#f6d365", "#fda085"],
+  box: { borderStyle: "round" },
+  align: "left",
+  sampleText: "AILogo",
+});
