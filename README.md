@@ -55,3 +55,5 @@ npx ailogo show --theme claude --boxed --align center
 ## OSS
 
 Licensed under MIT. Contributions welcome! See `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`.
+
+See `examples/USAGE.md` for more examples.
