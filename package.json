@@ -1,0 +1,29 @@
+{
+  "name": "ailogo-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ASCII logo renderer CLI and SDK",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/USER/REPO.git"
+  },
+  "bugs": {
+    "url": "https://github.com/USER/REPO/issues"
+  },
+  "homepage": "https://github.com/USER/REPO#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run -w @ailogo/core build && npm run -w @ailogo/cli build",
+    "clean": "npm run -w @ailogo/core clean && npm run -w @ailogo/cli clean",
+    "format": "echo format",
+    "lint": "echo lint",
+    "test": "echo no tests yet"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+

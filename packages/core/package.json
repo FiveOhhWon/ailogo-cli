@@ -1,0 +1,26 @@
+{
+  "name": "@ailogo/core",
+  "version": "0.1.0",
+  "description": "Core SDK for rendering ASCII logos",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
+
